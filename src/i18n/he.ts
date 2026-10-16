@@ -13,7 +13,6 @@ export const he: Dict = {
     closeMenu: 'סגירת התפריט',
     copy: 'העתקה',
     copied: 'הועתק',
-    copyCommand: 'העתקת הפקודה',
     mainNav: 'ראשי',
     heroArt: 'שבעה קובצי קוד בשפות שונות זורמים אל קובץ איחוד אחד',
   },
@@ -30,7 +29,7 @@ export const he: Dict = {
       'BundleBloom הוא כלי שורת פקודה קטן ל-Windows. מפנים אותו לתיקיית פרויקט, בוחרים את השפות הרלוונטיות, והוא כותב את כל קובצי הקוד המתאימים לקובץ טקסט אחד ומסודר — מוכן לבדיקת קוד, לגיבוי, לתיעוד או להדבקה בעוזר בינה מלאכותית.',
     download: 'הורדה ל-Windows',
     demo: 'להתנסות בדפדפן',
-    meta: ['חינם', 'Windows 10 ו-11, ‏64 סיביות', 'אין צורך בהתקנת ‎.NET'],
+    meta: ['חינם', '‏Windows 10 ו-Windows 11, ‏64 סיביות', 'אין צורך בהתקנת ‎.NET'],
     terminalCaption: 'הרצה טיפוסית',
   },
   features: {
@@ -86,7 +85,7 @@ export const he: Dict = {
     modeLabel: 'פקודה',
     presetsLabel: 'דוגמאות מוכנות',
     presets: {
-      basic: 'C# בלבד',
+      basic: 'C#‎ בלבד',
       web: 'ווב: JS + TS, עם נתיבים',
       everything: 'הכול, מקובץ לפי סוג',
       compact: 'קומפקטי וחתום',

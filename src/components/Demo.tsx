@@ -354,7 +354,7 @@ export function Demo() {
             <div className="console__cmd" dir="ltr">
               <span className="console__cmdlabel">{d.commandLabel}</span>
               <code>{mode === 'bundle' ? command : 'mycli create-rsp'}</code>
-              <CopyButton text={mode === 'bundle' ? command : 'mycli create-rsp'} label={t.a11y.copyCommand} />
+              <CopyButton text={mode === 'bundle' ? command : 'mycli create-rsp'} />
             </div>
 
             <div className="console__window">

@@ -11,7 +11,6 @@ export const en = {
     closeMenu: 'Close menu',
     copy: 'Copy',
     copied: 'Copied',
-    copyCommand: 'Copy command',
     mainNav: 'Main',
     heroArt: 'Seven source files in different languages flowing into a single bundle file',
   },

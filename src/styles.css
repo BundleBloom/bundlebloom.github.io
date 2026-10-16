@@ -7,7 +7,7 @@
   --violet: #8b6cff;
   --violet-deep: #5b3fd6;
   --cyan: #3be3d3;
-  --cyan-deep: #0f8f86;
+  --cyan-deep: #0b6f68;
   --gold: #e9bc63;
   --gold-soft: #f6d58f;
   --gold-deep: #b9852e;
@@ -17,7 +17,7 @@
   --ink-2: #3d3f6b;
   --on-dark: #eceeff;
   --muted: #a9aed6;
-  --muted-2: #6c71a3;
+  --muted-2: #8a8fc2;
   --line-dark: rgba(169, 174, 214, 0.16);
   --line-light: rgba(21, 22, 58, 0.1);
 
@@ -763,7 +763,7 @@ main:focus {
 }
 .chip small {
   font-family: var(--font-mono);
-  color: var(--muted-2);
+  color: #555a8c;
   font-size: 0.75rem;
   font-weight: 500;
 }

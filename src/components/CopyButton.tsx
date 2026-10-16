@@ -35,7 +35,6 @@ export function CopyButton({ text, label }: { text: string; label?: string }) {
     <button
       type="button"
       className={`copy-btn${copied ? ' is-copied' : ''}`}
-      aria-label={copied ? t.a11y.copied : (label ?? t.a11y.copy)}
       onClick={async () => {
         if (await copyText(text)) {
           setCopied(true);
@@ -45,16 +44,16 @@ export function CopyButton({ text, label }: { text: string; label?: string }) {
       }}
     >
       <Icon name={copied ? 'check' : 'copy'} />
-      <span className="copy-btn__text" aria-hidden="true">
+      <span className="copy-btn__text" aria-live="polite">
         {copied ? t.a11y.copied : t.a11y.copy}
       </span>
+      <span className="visually-hidden">: {label ?? text}</span>
     </button>
   );
 }
 
 /** A single copyable command line. Always LTR. */
 export function CommandLine({ cmd, prompt = 'PS>' }: { cmd: string; prompt?: string }) {
-  const { t } = useI18n();
   return (
     <div className="cmdline" dir="ltr">
       <code>
@@ -63,7 +62,7 @@ export function CommandLine({ cmd, prompt = 'PS>' }: { cmd: string; prompt?: str
         </span>
         {cmd}
       </code>
-      <CopyButton text={cmd} label={t.a11y.copyCommand} />
+      <CopyButton text={cmd} />
     </div>
   );
 }

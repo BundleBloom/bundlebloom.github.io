@@ -41,11 +41,14 @@ function LanguageSwitcher() {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-controls={menuId}
-        aria-label={`${t.a11y.language}: ${current?.label ?? ''}`}
         onClick={() => setOpen((o) => !o)}
       >
         <Icon name="globe" />
-        <span className="lang__code">{locale.toUpperCase()}</span>
+        <span className="visually-hidden">{t.a11y.language}: </span>
+        <span className="lang__code" aria-hidden="true">
+          {locale.toUpperCase()}
+        </span>
+        <span className="visually-hidden">{current?.label}</span>
       </button>
       {open && (
         <div className="lang__menu" id={menuId} role="menu" aria-label={t.a11y.language}>

@@ -35,7 +35,8 @@ function HeroTerminal({ caption }: { caption: string }) {
         <span />
         <em>PowerShell</em>
       </div>
-      <pre className="hero-term__body" aria-label={`${HERO_CMD}\n${HERO_OUT}`}>
+      <pre className="hero-term__body">
+        <span className="visually-hidden">{`${HERO_CMD}\n${HERO_OUT}`}</span>
         <span aria-hidden="true">
           <span className="t-prompt">PS C:\projects\demo-shop&gt; </span>
           <span className="t-cmd">{HERO_CMD.slice(0, typed)}</span>
