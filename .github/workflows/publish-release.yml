@@ -39,6 +39,6 @@ jobs:
           v='${{ inputs.version }}'
           gh release create "v$v" assets/release/* \
             --repo "$GITHUB_REPOSITORY" \
-            --target "$(git -C assets rev-parse origin/main 2>/dev/null || echo main)" \
+            --target main \
             --title "BundleBloom $v" \
             --notes-file assets/release-notes.md
