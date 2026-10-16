@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BundleBloom — bundle your source files into one</title>
+    <meta name="description" content="BundleBloom is a free Windows command-line tool that gathers the source files of a project into one organized text file." />
+    <meta name="theme-color" content="#070b24" />
+    <meta property="og:title" content="BundleBloom" />
+    <meta property="og:description" content="Gather a project's source files into one organized text file. Free for Windows." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bundlebloom.github.io/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      try {
+        var l = localStorage.getItem('bundlebloom.locale');
+        if (!l) l = (navigator.language || '').toLowerCase().indexOf('he') === 0 ? 'he' : 'en';
+        if (l === 'he') { document.documentElement.lang = 'he'; document.documentElement.dir = 'rtl'; }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>BundleBloom needs JavaScript for this page. Downloads: https://github.com/BundleBloom/bundlebloom.github.io/releases</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
