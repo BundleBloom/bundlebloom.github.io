@@ -19,10 +19,8 @@ mycli @mybundle.rsp
 | --- | --- |
 | `src/` | Website (React, TypeScript, Vite). `src/sim/` is the deterministic in-browser demo. |
 | `src/i18n/` | English and Hebrew text. |
-| `packaging/cli-src/` | Unmodified snapshot of the `mycli` C# source, with SHA-256 hashes. |
-| `packaging/installer/` | Inno Setup script (per-user install, adds `mycli` to PATH). |
-| `packaging/scripts/` | Smoke tests run against the built executable and the installed command. |
-| `.github/workflows/` | `pages.yml` deploys the site from `main`; `release.yml` builds, tests and drafts Windows releases. |
+| `src/config.ts` | Release version and download links (GitHub Releases of this repository). |
+| `.github/workflows/pages.yml` | Builds, tests and deploys the site to GitHub Pages on every push to `main`. |
 
 ## Development
 
@@ -33,11 +31,12 @@ npm test           # demo engine tests
 npm run build      # type-check and production build into dist/
 ```
 
-## Releasing
+## Releases
 
-1. Update `RELEASE.version` in `src/config.ts` and add `packaging/release-notes/vX.Y.Z.md`.
-2. Push a tag `vX.Y.Z`. The release workflow builds, tests, installs and uninstalls on a
-   Windows runner, then creates a **draft** release.
-3. Review the run and the draft, then publish it.
+Windows downloads are published as assets of this repository's
+[Releases](https://github.com/BundleBloom/bundlebloom.github.io/releases). They are built from
+source, installed and tested on a Windows runner before being attached. To point the website at
+a new version, update `RELEASE.version` in `src/config.ts`.
 
-The installer is not code-signed, so Windows SmartScreen may warn on first run.
+The installer is not code-signed, so Windows SmartScreen may warn on first run. Each release
+includes `SHA256SUMS.txt` for verification.
