@@ -1,0 +1,2 @@
+38c59af976cda922bcb0c64abf2f0548e01a00b7cf0b3cad817810314882c7b6  BundleBloom-1.0.0-win-x64.zip
+2588c14ff6a834ef65e8cbeee18aa7a1eba085be6e55f70aae3b3544e95e1200  BundleBloom-Setup-1.0.0-win-x64.exe
